@@ -19,6 +19,7 @@ func main() {
   if err != nil {
     return err
   }
+
   // Create a new file
   err = client.CreateFile("hello_world.txt", false)
   if err != nil {
