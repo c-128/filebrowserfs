@@ -14,6 +14,8 @@ type loginRequest struct {
 	Recaptcha string `json:"recaptcha"`
 }
 
+// Log into a File Browser server for the given username and password
+// You must call client.RenewToken() before the token expires (default is 2 hours)
 func Login(baseURL string, username string, password string) (*FilebrowserFS, error) {
 	url, err := url.Parse(baseURL)
 	if err != nil {
