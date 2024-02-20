@@ -17,7 +17,7 @@ import (
 func main() {
   client, err := filebrowserfs.Login("http://localhost/", "admin", "securepassword")
   if err != nil {
-    return err
+    panic(err)
   }
 
   // Create a new file
